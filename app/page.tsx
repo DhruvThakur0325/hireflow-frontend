@@ -20,7 +20,8 @@ type ScreeningResult = {
   message: string;
 };
 
-const API_URL = "https://hireflow-backend-2.onrender.com";
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000";
 const statuses = ["Under Review", "Shortlisted", "Rejected", "Hired"];
 
 export default function Home() {
